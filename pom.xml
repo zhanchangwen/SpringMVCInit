@@ -27,54 +27,77 @@
 			<version>4.1.2.RELEASE</version>
 			<scope>compile</scope>
 		</dependency>
+		<dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-databind</artifactId>
+			<version>2.9.3</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-core -->
+		<dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-core</artifactId>
+			<version>2.9.3</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-annotations -->
+		<dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-annotations</artifactId>
+			<version>2.9.3</version>
+		</dependency>
+		<dependency>
+			<groupId>org.codehaus.jackson</groupId>
+			<artifactId>jackson-mapper-asl</artifactId>
+			<version>1.9.13</version>
+		</dependency>
+
 	</dependencies>
 	<build>
 		<finalName>springmvc</finalName>
 		<pluginManagement>
-		<plugins>
+			<plugins>
 
-			<plugin>
+				<plugin>
 
-				<groupId>org.apache.tomcat.maven</groupId>
+					<groupId>org.apache.tomcat.maven</groupId>
 
-				<artifactId>tomcat7-maven-plugin</artifactId>
+					<artifactId>tomcat7-maven-plugin</artifactId>
 
-				<version>2.2</version>
+					<version>2.2</version>
 
-				<configuration>
+					<configuration>
 
-					<url>http://localhost:8080/manager/text</url>
+						<url>http://localhost:8080/manager/text</url>
 
-					<username>script</username>
+						<username>script</username>
 
-					<password>tomcat</password>
+						<password>tomcat</password>
 
-				</configuration>
+					</configuration>
 
-			</plugin>
+				</plugin>
 
-			<plugin>
+				<plugin>
 
-				<groupId>org.apache.maven.plugins</groupId>
+					<groupId>org.apache.maven.plugins</groupId>
 
-				<artifactId>maven-compiler-plugin</artifactId>
+					<artifactId>maven-compiler-plugin</artifactId>
 
-				<version>3.8.0</version>
+					<version>3.8.0</version>
 
-				<configuration>
+					<configuration>
 
-					<source>1.8</source>
+						<source>1.8</source>
 
-					<target>1.8</target>
+						<target>1.8</target>
 
-					<encoding>UTF-8</encoding>
-					<executable>D:/Program Files/Java/jdk1.8.0_181/bin/javac</executable>
+						<encoding>UTF-8</encoding>
+						<executable>D:/Program Files/Java/jdk1.8.0_181/bin/javac</executable>
 
-					<!-- 指定编码格式，否则在DOS下运行mvn compile命令时会出现莫名的错误，因为系统默认使用GBK编码 -->
+						<!-- 指定编码格式，否则在DOS下运行mvn compile命令时会出现莫名的错误，因为系统默认使用GBK编码 -->
 
-				</configuration>
-			</plugin>
-		</plugins>
+					</configuration>
+				</plugin>
+			</plugins>
 		</pluginManagement>
 	</build>
 </project>
